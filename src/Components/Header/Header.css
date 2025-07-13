@@ -1,0 +1,283 @@
+
+.section-navbar {
+  width: 100%;
+  height: 13rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.container .navbar-grid {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  margin-top: 1.4rem;
+}
+
+.item {
+  display: flex;
+  gap: 3.9rem;
+
+}
+
+.item .fa-caret-down {
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  margin-right: 3rem;
+
+}
+
+.item .fa-caret-up {
+  font-size: 1.6rem;
+  color: var(--bg-color);
+  margin-right: 3rem;
+
+}
+
+.navbar-item {
+  background-color: #61a607;
+  width: 15%;
+  padding: 0.6rem 0 0.2rem 1.2rem;
+  border-radius: 0.6rem;
+  margin-right: 4rem;
+}
+
+.item li {
+  font-weight: 500;
+  color: var(--bg-color);
+}
+
+.navbar-item p {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--bg-color);
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 2.5rem;
+}
+
+.fa-location-dot {
+  font-size: 1.5rem;
+
+}
+
+nav,ul {
+  display: flex;
+  gap: 7.4rem;
+  margin-top: 1rem;
+  text-transform: capitalize;
+}
+
+.listItem:hover {
+  transition: 0.2s ease-in;
+  cursor: pointer;
+  color: #535bf2;
+}
+
+
+.fa-angles-right {
+  font-size: 1.5rem;
+  font-weight: 0;
+}
+
+.nav-search {
+  width: 60%;
+  height: 35px;
+  border-radius: 0.5rem;
+  border: 1px solid #368e03;
+}
+
+.fa-magnifying-glass {
+  padding-left: 0.5rem;
+  width: 10%;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: #368e03;
+}
+
+.search {
+  width: 90%;
+  height: 30px;
+  border: none;
+  border-radius: 0px 0.5rem 0.5rem 0px;
+  font-size: 1.2rem;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.navbar-login {
+  width: 10%;
+  height: 32px;
+  background-color: var(--heading-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  
+}
+
+.navbar-login p {
+  color: var(--bg-color);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 800;
+
+}
+
+li,
+p,
+a {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  color: var(--para-color);
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+
+}
+li a:hover {
+  content: "";
+  left: 0;
+  bottom: -0.3rem;
+  width: 0%;
+  border-bottom: 0.2rem solid var(--main-color);
+}
+.icon-large {
+    font-size: 2rem;
+    padding: 1rem;
+    color: #fff;
+}
+
+.topBarIcon {
+    cursor: pointer;
+    position: relative;
+    font-size: 2rem;
+}
+.topbarIconBadge{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    padding: 0.3rem 0 0.2rem 0.2rem;
+}
+.ham-menu {
+  display: none;
+}
+
+.ham-menu button {
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 2rem 0.4rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+.menu-mobile {
+  display: none;
+  flex-direction: column;
+}
+.menu-mobile.active {
+  display: flex;
+}
+.cart-login{
+    display: flex;
+}
+
+@media (max-width:842px) {
+    .section-navbar{
+        padding: 0 3rem;
+    }
+}
+@media (max-width: 668px) {
+
+   .item {
+    gap: 1rem;
+   
+  }
+
+  .navbar-item {
+    width: 18%;
+    padding: 0.6rem 2.5rem 0.2rem 1.5rem;
+
+  }
+  .menu-web {
+    display: none;
+  }
+
+  .ham-menu {
+    display: inline-block;
+    margin-left: 35rem;
+  }
+  .menu-mobile {
+    position: absolute;
+    top: 13rem;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    gap: 1.2rem;
+  }
+   nav,
+  ul {
+    display: flex;
+    align-items: center;
+
+    & li:last-child {
+      margin-bottom: 1rem;
+    }
+  }
+  
+}
+@media (max-width: 604px) {
+  .item {
+    gap: 1rem;
+   
+  }
+
+  .navbar-item {
+    width: 24%;
+    padding: 0.6rem 2.5rem 0.2rem 1.5rem;
+
+  }
+  .ham-menu {
+    display: inline-block;
+    margin-left: 20rem;
+  }
+}
+
+@media (max-width: 480px) {
+ .ham-menu {
+   display: block;
+  }
+  .ham-menu button{
+    background-color: #000;
+    color: #fff;
+    padding:  0.5rem  1.5rem 0.2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  .ham-menu{
+
+    margin-left: 30rem;
+
+   }
+}

@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+html {
+  font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 90rem;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+
+
+
+:root {
+  --main-color: #679eff;
+  --supporting-color: #ebf3fe;
+  --font-color: #424242;
+  --bg-color: #ffffff;
+  --heading-color: #000a19;
+  --para-color: #504e4d;
+  --btn-hover-bg-color: #003b99;
+  --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+}
+
+
+
+/* section1 */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-two--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.section-hero-image img {
+  width: 100%;
+  height: auto;
+}
+
+.section-hero .grid {
+  align-items: center;
+  gap: 6.4rem;
+}
+
+.section-hero--content {
+  font-size: 1rem;
+}
+
+.hero-subheading {
+  text-transform: capitalize;
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
+  word-spacing: 0.7rem;
+  font-weight: 400;
+  color: var(--btn-hover-bg-color);
+}
+
+.hero-heading {
+  font-size: 3.7rem;
+}
+
+.hero-para {
+  color: var(--supporting-color);
+  margin: 1.5rem 0 2rem 0;
+}
+
+.custom-shape-divider-bottom-1736256540 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1736256540 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-bottom-1736256540 .shape-fill {
+  fill: #FFFFFF;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.ham-menu {
+  display: none;
+}
+
+.ham-menu button {
+  background-color: #000;
+  color: #fff;
+  padding: 0.8rem 2rem 0.4rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+/* mediaquries */
+@media (max-width:1200px) {
+  html {
+    font-size: 58.25%;
+  }
+}
+
+@media (max-width:998px) {
+
+  html {
+    font-size: 56%;
+  }
+
+}
+
+
+
+
+
+
+/* @media (max-width:615px) { */
+
+  /* .nav-search {
+    height: 28px;
+  }
+
+  .search {
+    font-size: 1rem;
+    height: 20px;
+  }
+
+  .fa-magnifying-glass {
+    padding-left: 0.5rem;
+    font-size: 1rem;
+  } */
+
+  /* .ham-menu button{
+    background-color: #000;
+    color: #fff;
+    padding:  0.5rem  1.5rem 0.2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  .ham-menu{
+
+    margin-left: 30rem;
+
+   } */
+/* } */
