@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const ListItem = ({ item, setProductId }) => {
-  const { id, title, price, img, qty } = item;
+  const { id, title, price, img,baseQty, baseLabel } = item;
   const [inCart, setInCart] = useState(false);
   const [count, setCount] =  useState(1);
 
@@ -31,9 +31,10 @@ export const ListItem = ({ item, setProductId }) => {
       <div className="card-content">
         <p className="item-name">{title}</p>
         <p className="item-Qty">
-          Qty: <span>{qty.toLowerCase()}</span>
+          {/* Qty: <span>{qty.toLowerCase()}</span> */}
+          Qty:  <span>{count * baseQty} {baseLabel}</span>
         </p>
-        <h4 className="text-content">Rs: {price}</h4>
+        <h4 className="text-content"> Rs: {price * count}</h4>
 
         {!inCart ? (
           <button onClick={handleAddToCart} className="btn">

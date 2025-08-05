@@ -1,5 +1,4 @@
 import { GrClose } from "react-icons/gr";
-// import { Form } from "react-router-dom";
 import "./Model.css";
 export const Model = ({ closeModel }) => {
     console.log(closeModel, "rrrr");

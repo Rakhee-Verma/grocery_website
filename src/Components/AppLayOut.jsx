@@ -13,7 +13,9 @@ const AppLayOut = ({ onFilterText,
                 onCategorySelect={onCategorySelect}
                 onHeaderItem={onHeaderItem}
                 cartAllProduct={cartAllProduct} />
-            <Outlet />
+            <main>
+                <Outlet />
+            </main>
             <Footer />
         </>
     )

@@ -41,11 +41,13 @@ export const Cart = ({ cartAllProduct, setCartAllProduct }) => {
                             <div className="cart-text">
                                 <p className="item-name">{item.title}</p>
                                 <p className="item-Qty">
-                                    Qty: <span>{item.qty}</span>
+                                    {/* Qty: <span>{item.qty}</span> */}
+                                     Qty:  {item.baseQty * item.qty} {item.baseLabel}
                                 </p>
                             </div>
                             <div className="cart-price">
-                                <h4>Rs: {item.price}</h4>
+                                {/* <h4>Rs: {item.price}</h4> */}
+                                 Total Price: ₹{item.price * item.qty}
                             </div>
                             <div className="cart-btn">
                                 <button className="btn">

@@ -2,48 +2,45 @@
     box-shadow: var(--btn-box-shadow);
 }
 
-.img-div{
+.img-div {
     margin-top: 1rem;
     width: 90%;
     height: 25vh;
     margin-left: 1rem;
-   
+
 }
-.btn{
+
+.btn {
     padding: 0.8rem 3rem;
     border-radius: 0.6rem;
-    margin: 1rem 0 1.5rem 2.9rem;
+    margin: 1.5rem 0 2rem 2.9rem;
     color: #592c2c;
     border: 1px solid #402121;
     background-color: #fff;
-  }
-  /* .qty-controls{
-    border-radius: 0.6rem;
-    margin: 1rem 0 1.5rem 2.9rem;
-    color: #592c2c;
-    border: 1px solid #402121;
-    background-color: #fff;
-     height: 35px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  
-  } */
-  
-.item-name{
+}
+
+
+.item-name {
     margin: 0.5rem 0 0.5rem 2rem;
 }
-.item-Qty{
+
+.item-Qty {
     margin: 0.5rem 0 0.5rem 2rem;
-    /* text-transform: lowercase; */
+
 }
-.text-content{
+
+.item-Qty span {
+    text-transform: lowercase;
+}
+
+.text-content {
     margin-left: 2rem;
 }
-.grid-four--cols{
-    grid-template-columns: repeat(4,1fr);
+
+.grid-four--cols {
+    grid-template-columns: repeat(4, 1fr);
 }
+
 h1,
 h2,
 h3,
@@ -64,19 +61,229 @@ a {
     line-height: 1.2;
     list-style: none;
 }
-.addBtn{
+
+.addBtn {
     font-size: 1.4rem;
     font-weight: 500;
 }
 
-.num{
-   font-size: 1.3rem;
-   font-weight: 500;
+.num {
+    font-size: 1.3rem;
+    font-weight: 500;
     margin: 0 2rem;
+}
+
+/* carousel style */
+.carousel-container {
+    max-width: 90rem;
+    margin: auto;
+    padding: 2rem 0;
+    /* position: relative; */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    animation: slide 12s infinite linear;
+    /* transition: transform 0.5s ease-in-out; */
+
+}
+
+.carousel-img {
+    /* width: 100%; */
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-btn.prev {
+    left: 20rem;
+}
+
+.carousel-btn.next {
+    right: 20rem;
+}
+
+
+/* main cart */
+.cart-container {
+    max-width: 90rem;
+    padding: 2rem 0;
+    margin: auto;
+
+
+}
+
+
+.cart-container .grid {
+    display: grid;
+    gap: 6rem;
+}
+
+.cart-img {
+
+    width: 100%;
+    height: 25vh;
+    border-radius: 1rem;
+
+}
+
+.cart-container .cart-text {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+/* ----About--- */
+.grid-two--cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-text {
+    margin-top: 5rem;
+    padding-left: 2rem;
+}
+
+.about-heading {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.about-image {
+    width: 100%;
+}
+
+/*---- Shop---- */
+.image-wrapper {
+    /* position: relative; */
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.image-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.overlay-text h5,
+.overlay-text h1 {
+    margin: 0.5rem 0;
+    color: #fff;
+
+}
+
+.overlay-text h1 {
+    font-size: 3rem;
+}
+
+.overlay-text h5 {
+    background-color: #fc2a2a;
+    width: 150px;
+    /* padding: 0.5rem; */
+    margin-left: 25rem;
+    text-transform: uppercase;
+}
+
+.Shopbtn {
+    margin-top: 1rem;
+    padding: 0.8rem 1.6rem;
+    background-color: #fc2a2a;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+}
+
+/* ---Contact-- */
+.grid-three--cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    list-style: none;
+    margin-top: 5rem;
+}
+.contact-list li{
+    padding-bottom: 1rem;
+}
+.contected-form{
+    margin-top: 5rem;
+    width: 100%;
+    /* margin-right: 5rem; */
+}
+.contected-form .form-control{
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+}
+.form-label{
+    display: block;
+    font-size: 1.5rem;
+}
+.contact-btn{
+    padding: 1rem;
+    background-color: #0d6efd;
+    color:#fff;
+    border: none;
+    border-radius: 0.5rem;
+}
+.contact-details{
+    margin: 5rem 0  0 7rem;
+}
+.contact-details h6{
+    padding-left: 1.9rem;
+    font-weight: 600;
+    font-size: 2rem;
+}
+.contact-details .view{
+    padding: 2rem 0 0 1.9rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    
+}
+.contact-details p{
+    font-size: 1.3rem;
+    padding-top: 1.2rem;
 }
 /* ----media query---- */
 @media (max-width:998px) {
-   .grid-four--cols{
-   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-   }
+    .grid-four--cols {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }

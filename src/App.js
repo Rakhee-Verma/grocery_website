@@ -5,6 +5,10 @@ import { ConstentData } from './Context/ConstentData';
 import { useEffect, useState } from 'react';
 import { Home } from './Pages/Home';
 import AppLayOut from './Components/AppLayOut';
+import { About } from './Pages/About';
+import { Shop } from './Pages/Shop';
+import { Blog } from './Pages/Blog';
+import { Contact } from './Pages/Contact';
 
 const App = () => {
   // ----Search and filter state----
@@ -24,45 +28,44 @@ const App = () => {
   };
 
   const filteredData = searchItems.filter(item =>
-    item.product.toLowerCase().includes(filterText.toLowerCase())
+    item.product.toLowerCase().includes(filterText.toLowerCase()) || item.name.toLowerCase().includes(filterText.toLowerCase())
   );
   //-----Cart state-----
   const [productId, setProductId] = useState('');
   const [cartAllProduct, setCartAllProduct] = useState([]);
-  // console.log("productId",productId);
-  // useEffect(() => {
-  //   const filterObject = ConstentData.filter(product => product.id === productId);
-  //   setCartAllProduct([...cartAllProduct, ...filterObject])
-  // }, [productId ])
   useEffect(() => {
-  if (!productId) return;
-  const filterObject = ConstentData.find(product => product.id === productId);
-  if (filterObject) {
-    setCartAllProduct(prev => [...prev, filterObject]);
-  }
-}, [productId]);
+    if (!productId) return;
+    const filterObject = ConstentData.find(product => product.id === productId);
+    if (filterObject) {
+      setCartAllProduct(prev => [...prev, filterObject]);
+    }
+  }, [productId]);
   // ----Router-------
-  const router=createBrowserRouter([
-      {
-        path:"/",
-        element:<AppLayOut onFilterText={handleFilterText}
-              onCategorySelect={handleCategoryFilter}
-              onHeaderItem={handleHeaderClick}
-              cartAllProduct={cartAllProduct}/>,
-        children:[
-          {
-            path:"/",
-            element:<Home filterData={filteredData} setProductId={setProductId}/>
-          },
-          {
-            path:"/cart",
-            element:<Cart cartAllProduct={cartAllProduct} setCartAllProduct={setCartAllProduct} />
-          }
-        ]
-      }
-    ])
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <AppLayOut onFilterText={handleFilterText}
+        onCategorySelect={handleCategoryFilter}
+        onHeaderItem={handleHeaderClick}
+        cartAllProduct={cartAllProduct} />,
+      children: [
+        {
+          path: "/",
+          element: <Home filterData={filteredData} setProductId={setProductId} filterText={filterText} />
+        },
+        { path: "/about", element: <About /> },
+        { path: "/shop", element: <Shop /> },
+        { path: "/blog", element: <Blog /> },
+        { path: "/contact", element: <Contact /> },
+        {
+          path: "/cart",
+          element: <Cart cartAllProduct={cartAllProduct} setCartAllProduct={setCartAllProduct} />
+        }
+      ]
+    }
+  ])
   return (
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   );
 };
 
